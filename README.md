@@ -1,57 +1,174 @@
 # ETL Pipeline for Patient Admissions and Outcomes
 
-## Project Description
+## Table of Contents
+- [Introduction](#introduction)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Project Structure](#project-structure)
+- [Data](#data)
+  - [Downloading the Data](#downloading-the-data)
+  - [Data Description](#data-description)
+- [Setup](#setup)
+- [Process](#process)
+  - [1. Data Ingestion](#1-data-ingestion)
+  - [2. Data Transformation](#2-data-transformation)
+  - [3. Data Visualisation](#3-data-visualisation)
+- [Running the Project](#running-the-project)
 
-This project implements an end-to-end Extract-Transform-Load (ETL) pipeline for processing patient admission and outcome data. The pipeline ingests raw patient admission, lab, and diagnosis data, cleans and transforms it using dbt, and loads it into a clean, ready-to-query PostgreSQL database. Apache Airflow is used to schedule and monitor the workflow.
+---
 
-## Key Features
+## Introduction
 
-- Extract data from CSV or JSON files
-- Clean and validate patient data
-- Normalize ICD-10 codes and lab result units
-- Transform raw data into a more queryable format (fact tables, dimensional models)
-- Load data into a PostgreSQL database
+This project is an end-to-end ETL (Extract, Transform, Load) pipeline designed to process artificial patient admission and medical data. The pipeline uses **Apache Airflow** for orchestration, **PostgreSQL** for data storage, **dbt** for data transformation, and **Power BI** for data visualisation. The ETL pipeline automates the ingestion of raw data from CSV files, cleans and transforms it into structured formats, and stores it in a PostgreSQL database ready for querying and visualisation.
 
-## Tools and Technologies
+The dataset is synthetic and designed to mimic real-world medical records, with the ability to customise characteristics such as demographics, diagnoses, and lab results for thousands to millions of patients.
 
-- Apache Airflow: For orchestration
-- PostgreSQL: For data storage
-- dbt: For data transformation
-- Docker: For containerization and deployment
+---
 
-## Data Description
+## The Problem
 
-The pipeline processes artificial patient data generated according to pre-defined criteria. The database contains characteristics similar to a real medical database, including:
+Accessing real-world Electronic Medical Records (EMRs) is often restricted due to privacy concerns and regulatory limitations. In addition, handling and processing large-scale medical data in real time presents challenges such as data integration, normalisation, and privacy protection.
 
-- Patient admission details
-- Demographics
-- Socioeconomic details
-- Lab results
-- Medications
+---
 
-The database is customizable, allowing for the generation of populations with specific characteristics (e.g., 100,000 patients, 60% male, 40% African American, 15% diabetic, etc.). The number of records can range from several thousands to millions, depending on the desired configuration.
+## The Solution
 
-## Data Tables
+This project uses a synthetic **database of artificial patients**. The data is generated with predefined characteristics that replicate real-world medical records, such as patient demographics, admissions, diagnoses, and lab results. The pipeline offers the flexibility to generate populations with customisable demographic distributions (e.g., 60% male, 40% African American) and specific medical conditions.
 
-1. PatientCorePopulatedTable
-2. AdmissionsCorePopulatedTable
-3. AdmissionsDiagnosesCorePopulatedTable
-4. LabsCorePopulatedTable
+### Key Features:
+- **Customizable database**: Generate a population of patients with custom characteristics.
+- **Comprehensive**: Includes information such as patient demographics, lab results, admissions, and diagnosis codes (ICD-10).
+- **Scalable**: The data can represent populations ranging from thousands to millions of records.
 
-For detailed information on the structure of each table, please refer to the data dictionary in the `docs` folder.
+---
 
-## Setup and Installation
+## Project Structure
 
-(Instructions for setting up the project will be added here)
+```plaintext
+├── airflow/
+│   ├── dags/
+│   └── plugins/
+├── dbt/
+│   ├── models/
+│   ├── tests/
+│   └── dbt_project.yml  # dbt project configuration
+├── data/
+│   └── raw/
+│       └── patient_data.csv  # Raw data (downloaded)
+├── scripts/
+│   └── load_data.sql  # SQL script for PostgreSQL setup
+├── docs/
+├── docker-compose.yml  # Docker setup for PostgreSQL, Airflow, and dbt
+└── README.md  # Project documentation
+```
 
-## Usage
+---
 
-(Instructions for running the ETL pipeline will be added here)
+## Data
 
-## Contributing
+### Downloading the Data
+The dataset is too large to upload directly to the repository. You can download the data from the following link:
 
-(Guidelines for contributing to the project will be added here)
+[Download Patient Data (ZIP)](https://figshare.com/ndownloader/files/12941429)
 
-## License
+After downloading, extract the files into the `data/raw/` directory. This data will be ingested into the pipeline.
 
-(License information will be added here)
+### Data Description
+
+The dataset consists of multiple tables that simulate patient records. Key tables include:
+
+1. **PatientCorePopulatedTable**
+   - Contains demographic data for each patient, including gender, race, marital status, and more.
+
+2. **AdmissionsCorePopulatedTable**
+   - Represents patient admission records, including admission start and end dates.
+
+3. **AdmissionsDiagnosesCorePopulatedTable**
+   - Stores primary diagnosis information for each patient admission, using ICD-10 codes.
+
+4. **LabsCorePopulatedTable**
+   - Contains patient lab results, including test names, values, and measurement units.
+
+---
+
+## Setup
+
+### Prerequisites
+- **Apache Airflow** (This project requires Airflow for orchestration)
+- Docker and Docker Compose
+- Power BI (for data visualisation)
+- [dbt](https://docs.getdbt.com/docs/installation) installed locally or in Docker (the `dbt_project.yml` file is located in `C:\Users\Itumeleng\DEProjects\dbt\dbt_project.yml`).
+
+### Clone the Repository
+```bash
+git clone https://github.com/ItumelengMogase/Real-Time-Data-Pipeline-for-Patient-Admissions.git
+cd Real-Time-Data-Pipeline-for-Patient-Admissions
+```
+
+### Data Setup
+1. Download the raw data ZIP file from [here](https://figshare.com/ndownloader/files/12941429) and extract it into the `data/raw/` folder.
+2. The extracted CSV files will be used for ingestion into PostgreSQL.
+
+### SQL Setup
+- A SQL script for creating necessary PostgreSQL tables is provided in the `scripts/` folder as `load_data.sql`. This script sets up the database schema for patient data storage.
+
+### Docker Setup
+To set up the required services (PostgreSQL, Apache Airflow, dbt), start the Docker containers using the following command:
+```bash
+docker-compose up -d
+```
+
+---
+
+
+
+## Process
+
+### 1. Data Ingestion
+- **Airflow** runs the **ingestion DAG** that reads raw CSV files from the `data/raw/` folder and inserts the data into **PostgreSQL staging tables**.
+- This process ensures that the raw patient data is available in PostgreSQL for further transformation.
+
+### 2. Data Transformation
+- **dbt** is responsible for transforming the raw data into clean, structured tables. The transformation includes:
+  - Cleaning and normalising patient demographics.
+  - Mapping ICD-10 diagnosis codes and lab results to their standardised forms.
+  - Creating fact and dimension tables to store cleaned data in a query-optimised format.
+
+The `dbt_project.yml` file is located in the `C:\Users\Itumeleng\DEProjects\dbt\` directory.
+
+### 3. Data Visualisation
+- Once the data is transformed, **Power BI** can be used to visualise it. Power BI connects to the PostgreSQL database and provides visual insights, such as:
+  - Trends in patient admissions.
+  - Distributions of lab test results.
+  - Diagnoses by demographic characteristics.
+
+---
+
+## Running the Project
+
+### Step 1: Start Docker Services
+Run the following command to start all services (Airflow, PostgreSQL, dbt):
+```bash
+docker-compose up -d
+```
+
+### Step 2: Ingest Data
+- Go to the Airflow web UI (typically available at `http://localhost:8080`) and trigger the DAG responsible for ingesting raw data into PostgreSQL.
+
+### Step 3: Run dbt Models
+After the data is ingested, run the dbt models to transform the data:
+```bash
+dbt run
+```
+This will transform the raw data into cleaned fact and dimension tables within PostgreSQL.
+
+### Step 4: Visualise Data in Power BI
+- Open Power BI and connect it to the PostgreSQL database.
+- Load the transformed tables into Power BI.
+- Build dashboards and visual reports to explore trends in patient admissions, diagnoses, and outcomes.
+
+---
+
+## Conclusion
+
+This project demonstrates a real-time ETL pipeline for processing medical data using **Docker**, **Apache Airflow**, **dbt**, and **PostgreSQL**. The pipeline automates the ingestion and transformation of synthetic patient data, making it ready for analysis in **Power BI**. The pipeline can be extended to handle larger datasets or other types of data sources.
