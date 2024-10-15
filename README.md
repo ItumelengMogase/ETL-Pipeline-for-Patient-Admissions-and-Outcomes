@@ -36,7 +36,7 @@ Accessing real-world Electronic Medical Records (EMRs) is often restricted due t
 This project uses a synthetic **database of artificial patients**. The data is generated with predefined characteristics that replicate real-world medical records, such as patient demographics, admissions, diagnoses, and lab results. The pipeline offers the flexibility to generate populations with customisable demographic distributions (e.g., 60% male, 40% African American) and specific medical conditions.
 
 ### Key Features:
-- **Customizable database**: Generate a population of patients with custom characteristics.
+- **Customisable database**: Generate a population of patients with custom characteristics.
 - **Comprehensive**: Includes information such as patient demographics, lab results, admissions, and diagnosis codes (ICD-10).
 - **Scalable**: The data can represent populations ranging from thousands to millions of records.
 
