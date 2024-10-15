@@ -1,0 +1,11 @@
+name: 'ETL_Pipeline_for_Patient_Admissions_and_Outcomes'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ETL_Pipeline_for_Patient_Admissions_and_Outcomes'
+
+model-paths: ['models']  # Update this line
+target-path: 'target'
+clean-targets:
+  - target
+  - dbt_modules

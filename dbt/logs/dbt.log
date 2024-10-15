@@ -1,0 +1,12 @@
+[0m18:37:35.744395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08DAFE3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08DAFE5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08DAFD250>]}
+
+
+============================== 18:37:35.747365 | 1509d1e6-d3b0-4967-95d3-89462d7e719d ==============================
+[0m18:37:35.747365 [info ] [MainThread]: Running with dbt=1.8.7
+[0m18:37:35.748362 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Itumeleng\\DEProjects\\ETL Pipeline for Patient Admissions and Outcomes\\dbt\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m18:37:35.753362 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'healthcare_etl'
+[0m18:37:35.755885 [debug] [MainThread]: Command `dbt build` failed at 18:37:35.755885 after 0.16 seconds
+[0m18:37:35.755885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08D4888F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08A46EDB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A08DAFD1F0>]}
+[0m18:37:35.756891 [debug] [MainThread]: Flushing usage events

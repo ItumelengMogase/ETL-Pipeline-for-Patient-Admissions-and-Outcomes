@@ -1,0 +1,60 @@
+# Name of the dbt project
+name: etl_pipeline_for_patient_admissions_and_outcomes
+
+# Version of the project
+version: 1.0.0
+
+# Project description (optional)
+description: >
+  A dbt project to clean and transform patient admissions and outcomes data 
+  from PostgreSQL using dbt models for a healthcare ETL pipeline.
+
+# Where dbt should store compiled SQL files
+target-path: "target"
+
+# Where dbt should store data documentation files
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Specify the connection to the PostgreSQL database
+profile: healthcare_etl
+
+# Configurations specific to the models directory
+model-paths: ["models"]
+
+# Where data should be seeded
+data-paths: ["data"]
+
+# Specify the models
+models:
+  etl_pipeline_for_patient_admissions_and_outcomes:
+    # Settings that apply to all models inside `models/`
+    materialized: table
+    enabled: true
+    
+    # Settings for specific subdirectories or models
+    staging:
+      materialized: view
+
+    # Example model-level config for patients.sql
+    patients:
+      description: "Cleans and transforms patient demographic data from PostgreSQL."
+
+# Specify your sources (raw tables from the PostgreSQL DB)
+sources:
+  - name: medical_data
+    schema: medical_data
+    database: healthcare_pipeline_db
+    tables:
+      - name: patientcorepopulatedtable
+        description: "Raw patient demographic data"
+      - name: admissionscorepopulatedtable
+        description: "Raw admissions data"
+      - name: admissionsdiagnosescorepopulatedtable
+        description: "Raw primary diagnosis data for admissions"
+      - name: labscorepopulatedtable
+        description: "Raw lab results data"
+
+# Configuration for testing the models
+tests-path: "tests"
