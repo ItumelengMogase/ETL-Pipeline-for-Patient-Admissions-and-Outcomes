@@ -1,0 +1,590 @@
+[0m11:51:52.180888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C85489E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C85489DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C844B8FE0>]}
+
+
+============================== 11:51:52.184916 | b9c522bf-3d40-4bf3-980f-bf39ea26c203 ==============================
+[0m11:51:52.184916 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:51:52.185910 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init ETL_Pipeline_for_Patient_Admissions_and_Outcomes', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:51:52.206966 [debug] [MainThread]: Starter project path: C:\Users\Itumeleng\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\dbt\include\starter_project
+[0m11:51:52.227744 [info ] [MainThread]: 
+Your new dbt project "ETL_Pipeline_for_Patient_Admissions_and_Outcomes" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:51:52.230739 [info ] [MainThread]: Setting up your profile.
+[0m11:54:53.632515 [info ] [MainThread]: Profile ETL_Pipeline_for_Patient_Admissions_and_Outcomes written to C:\Users\Itumeleng\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:54:53.636397 [debug] [MainThread]: Command `dbt init` succeeded at 11:54:53.636326 after 181.63 seconds
+[0m11:54:53.637455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C84503680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C8497D7C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013C855D9BB0>]}
+[0m11:54:53.637987 [debug] [MainThread]: Flushing usage events
+[0m11:55:11.889369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBCB3B8A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBC78FE210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBCA591B20>]}
+
+
+============================== 11:55:11.892898 | 0c3f7741-84a7-4ca5-a636-7f64de89db4d ==============================
+[0m11:55:11.892898 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:55:11.893899 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:55:11.936676 [info ] [MainThread]: dbt version: 1.8.7
+[0m11:55:11.937168 [info ] [MainThread]: python version: 3.12.7
+[0m11:55:11.938185 [info ] [MainThread]: python path: C:\Users\Itumeleng\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+[0m11:55:11.939200 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m11:55:12.039500 [info ] [MainThread]: Using profiles dir at C:\Users\Itumeleng\.dbt
+[0m11:55:12.039500 [info ] [MainThread]: Using profiles.yml file at C:\Users\Itumeleng\.dbt\profiles.yml
+[0m11:55:12.040993 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Itumeleng\DEProjects\ETL Pipeline for Patient Admissions and Outcomes\dbt_project.yml
+[0m11:55:12.040993 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m11:55:12.042996 [debug] [MainThread]: Command `dbt debug` failed at 11:55:12.042996 after 0.32 seconds
+[0m11:55:12.043993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBCB01D790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBCB5F48C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DBCB4D4D10>]}
+[0m11:55:12.043993 [debug] [MainThread]: Flushing usage events
+[0m11:55:50.145182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AFAEB5040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AF9EC5370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AFCCCBEC0>]}
+
+
+============================== 11:55:50.150358 | 671e0472-d0ca-4606-9e5b-9c049b4d04c3 ==============================
+[0m11:55:50.150358 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:55:50.150358 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:55:50.151355 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Itumeleng\DEProjects\ETL Pipeline for Patient Admissions and Outcomes\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:55:50.153360 [debug] [MainThread]: Command `dbt run` failed at 11:55:50.153360 after 0.12 seconds
+[0m11:55:50.153360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AFAF17320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AFD8E8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010AFAEB5040>]}
+[0m11:55:50.154359 [debug] [MainThread]: Flushing usage events
+[0m11:59:43.619080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A8C86270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A8C87C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A8C86150>]}
+
+
+============================== 11:59:43.624596 | f93c3853-db89-4d1e-b755-c38ca7ba68f3 ==============================
+[0m11:59:43.624596 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:59:43.625032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:59:43.647562 [info ] [MainThread]: dbt version: 1.8.7
+[0m11:59:43.647562 [info ] [MainThread]: python version: 3.12.7
+[0m11:59:43.648564 [info ] [MainThread]: python path: C:\Users\Itumeleng\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+[0m11:59:43.649562 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m11:59:43.776774 [info ] [MainThread]: Using profiles dir at C:\Users\Itumeleng\.dbt
+[0m11:59:43.777722 [info ] [MainThread]: Using profiles.yml file at C:\Users\Itumeleng\.dbt\profiles.yml
+[0m11:59:43.778243 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Itumeleng\DEProjects\ETL Pipeline for Patient Admissions and Outcomes\dbt_project.yml
+[0m11:59:43.788249 [info ] [MainThread]: adapter type: postgres
+[0m11:59:43.789253 [info ] [MainThread]: adapter version: 1.8.2
+[0m11:59:43.789253 [info ] [MainThread]: Configuration:
+[0m11:59:43.790287 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:59:43.791294 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:59:43.791294 [info ] [MainThread]: Required dependencies:
+[0m11:59:43.792294 [debug] [MainThread]: Executing "git --help"
+[0m11:59:43.844021 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:59:43.845035 [debug] [MainThread]: STDERR: "b''"
+[0m11:59:43.846033 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:59:43.847029 [info ] [MainThread]: Connection:
+[0m11:59:43.847029 [info ] [MainThread]:   host: localhost
+[0m11:59:43.848036 [info ] [MainThread]:   port: 5432
+[0m11:59:43.849033 [info ] [MainThread]:   user: itumeleng
+[0m11:59:43.850029 [info ] [MainThread]:   database: healthcare_pipeline_db
+[0m11:59:43.850029 [info ] [MainThread]:   schema: medical_data
+[0m11:59:43.851031 [info ] [MainThread]:   connect_timeout: 10
+[0m11:59:43.851031 [info ] [MainThread]:   role: None
+[0m11:59:43.852029 [info ] [MainThread]:   search_path: None
+[0m11:59:43.853028 [info ] [MainThread]:   keepalives_idle: 0
+[0m11:59:43.853028 [info ] [MainThread]:   sslmode: None
+[0m11:59:43.854029 [info ] [MainThread]:   sslcert: None
+[0m11:59:43.855028 [info ] [MainThread]:   sslkey: None
+[0m11:59:43.855028 [info ] [MainThread]:   sslrootcert: None
+[0m11:59:43.856028 [info ] [MainThread]:   application_name: dbt
+[0m11:59:43.856028 [info ] [MainThread]:   retries: 1
+[0m11:59:43.857132 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:59:43.858140 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m11:59:46.611560 [debug] [MainThread]: Using postgres connection "debug"
+[0m11:59:46.612566 [debug] [MainThread]: On debug: select 1 as id
+[0m11:59:46.612566 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:59:46.687220 [debug] [MainThread]: SQL status: SELECT 1 in 0.075 seconds
+[0m11:59:46.688230 [debug] [MainThread]: On debug: Close
+[0m11:59:46.689228 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:59:46.690310 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:59:46.691331 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\Itumeleng\DEProjects\ETL Pipeline for Patient Admissions and Outcomes\dbt_project.yml> not found
+
+[0m11:59:46.693315 [debug] [MainThread]: Command `dbt debug` failed at 11:59:46.693315 after 3.25 seconds
+[0m11:59:46.694315 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:59:46.694315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A8DD5EB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A892E6C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E0A892E3C0>]}
+[0m11:59:46.694315 [debug] [MainThread]: Flushing usage events
+[0m12:01:09.320240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4C030350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4F755940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4F757D40>]}
+
+
+============================== 12:01:09.323792 | ad11f0ed-3291-4720-b155-e8ad09849593 ==============================
+[0m12:01:09.323792 [info ] [MainThread]: Running with dbt=1.8.7
+[0m12:01:09.324803 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Itumeleng\\DEProjects\\ETL Pipeline for Patient Admissions and Outcomes\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m12:01:09.345323 [info ] [MainThread]: dbt version: 1.8.7
+[0m12:01:09.345795 [info ] [MainThread]: python version: 3.12.7
+[0m12:01:09.346810 [info ] [MainThread]: python path: C:\Users\Itumeleng\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+[0m12:01:09.347808 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m12:01:09.458537 [info ] [MainThread]: Using profiles dir at C:\Users\Itumeleng\.dbt
+[0m12:01:09.459538 [info ] [MainThread]: Using profiles.yml file at C:\Users\Itumeleng\.dbt\profiles.yml
+[0m12:01:09.460530 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Itumeleng\DEProjects\ETL Pipeline for Patient Admissions and Outcomes\dbt_project.yml
+[0m12:01:09.462532 [info ] [MainThread]: adapter type: postgres
+[0m12:01:09.463532 [info ] [MainThread]: adapter version: 1.8.2
+[0m12:01:09.467528 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m12:01:09.468152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ad11f0ed-3291-4720-b155-e8ad09849593', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4F95AED0>]}
+[0m12:01:09.612008 [info ] [MainThread]: Configuration:
+[0m12:01:09.614034 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:01:09.615034 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:01:09.616035 [info ] [MainThread]: Required dependencies:
+[0m12:01:09.617033 [debug] [MainThread]: Executing "git --help"
+[0m12:01:09.658862 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:01:09.659860 [debug] [MainThread]: STDERR: "b''"
+[0m12:01:09.659860 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:01:09.660870 [info ] [MainThread]: Connection:
+[0m12:01:09.661869 [info ] [MainThread]:   host: localhost
+[0m12:01:09.661869 [info ] [MainThread]:   port: 5432
+[0m12:01:09.662869 [info ] [MainThread]:   user: itumeleng
+[0m12:01:09.663866 [info ] [MainThread]:   database: healthcare_pipeline_db
+[0m12:01:09.663866 [info ] [MainThread]:   schema: medical_data
+[0m12:01:09.664869 [info ] [MainThread]:   connect_timeout: 10
+[0m12:01:09.664869 [info ] [MainThread]:   role: None
+[0m12:01:09.665869 [info ] [MainThread]:   search_path: None
+[0m12:01:09.665869 [info ] [MainThread]:   keepalives_idle: 0
+[0m12:01:09.666869 [info ] [MainThread]:   sslmode: None
+[0m12:01:09.667866 [info ] [MainThread]:   sslcert: None
+[0m12:01:09.667866 [info ] [MainThread]:   sslkey: None
+[0m12:01:09.668868 [info ] [MainThread]:   sslrootcert: None
+[0m12:01:09.668868 [info ] [MainThread]:   application_name: dbt
+[0m12:01:09.669869 [info ] [MainThread]:   retries: 1
+[0m12:01:09.670867 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m12:01:09.671867 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m12:01:09.776767 [debug] [MainThread]: Using postgres connection "debug"
+[0m12:01:09.777767 [debug] [MainThread]: On debug: select 1 as id
+[0m12:01:09.778761 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:01:09.831827 [debug] [MainThread]: SQL status: SELECT 1 in 0.054 seconds
+[0m12:01:09.833812 [debug] [MainThread]: On debug: Close
+[0m12:01:09.833812 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:01:09.834811 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:01:09.836819 [debug] [MainThread]: Command `dbt debug` succeeded at 12:01:09.836819 after 0.66 seconds
+[0m12:01:09.837819 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:01:09.837819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4F90B4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F4FC56330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022F5025AB40>]}
+[0m12:01:09.837819 [debug] [MainThread]: Flushing usage events
+[0m12:01:30.173888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613FEF6FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613F4963C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613FEF73E0>]}
+
+
+============================== 12:01:30.177903 | b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c ==============================
+[0m12:01:30.177903 [info ] [MainThread]: Running with dbt=1.8.7
+[0m12:01:30.178903 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'log_path': 'C:\\Users\\Itumeleng\\DEProjects\\ETL Pipeline for Patient Admissions and Outcomes\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:01:30.283571 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `source-paths` config has been renamed to `model-paths`. Please update your
+`dbt_project.yml` configuration to reflect this change.
+[0m12:01:30.284594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261406FF290>]}
+[0m12:01:30.519693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613E931D90>]}
+[0m12:01:30.594798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613ED20470>]}
+[0m12:01:30.596799 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m12:01:30.620143 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m12:01:30.621114 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:01:30.622623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261403D9F70>]}
+[0m12:01:32.789313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026140C5A7E0>]}
+[0m12:01:32.913265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026140C21E50>]}
+[0m12:01:32.913265 [info ] [MainThread]: Found 1 model, 423 macros
+[0m12:01:32.914262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026140C28710>]}
+[0m12:01:32.916259 [info ] [MainThread]: 
+[0m12:01:32.917257 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:01:32.919259 [debug] [ThreadPool]: Acquiring new postgres connection 'list_healthcare_pipeline_db'
+[0m12:01:33.027042 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db"
+[0m12:01:33.027042 [debug] [ThreadPool]: On list_healthcare_pipeline_db: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "list_healthcare_pipeline_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:01:33.028042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:01:33.111618 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.084 seconds
+[0m12:01:33.112622 [debug] [ThreadPool]: On list_healthcare_pipeline_db: Close
+[0m12:01:33.114616 [debug] [ThreadPool]: Acquiring new postgres connection 'list_healthcare_pipeline_db_medical_data'
+[0m12:01:33.120631 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db_medical_data"
+[0m12:01:33.121620 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: BEGIN
+[0m12:01:33.121620 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:01:33.162832 [debug] [ThreadPool]: SQL status: BEGIN in 0.041 seconds
+[0m12:01:33.163862 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db_medical_data"
+[0m12:01:33.163862 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "list_healthcare_pipeline_db_medical_data"} */
+select
+      'healthcare_pipeline_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'medical_data'
+    union all
+    select
+      'healthcare_pipeline_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'medical_data'
+    union all
+    select
+      'healthcare_pipeline_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'medical_data'
+  
+[0m12:01:33.206729 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.042 seconds
+[0m12:01:33.207739 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: ROLLBACK
+[0m12:01:33.208744 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: Close
+[0m12:01:33.213750 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.213750 [debug] [MainThread]: On master: BEGIN
+[0m12:01:33.213750 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:01:33.255636 [debug] [MainThread]: SQL status: BEGIN in 0.042 seconds
+[0m12:01:33.256647 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.256647 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:01:33.271645 [debug] [MainThread]: SQL status: SELECT 0 in 0.014 seconds
+[0m12:01:33.272646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026140A52D20>]}
+[0m12:01:33.272646 [debug] [MainThread]: On master: ROLLBACK
+[0m12:01:33.273646 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.273646 [debug] [MainThread]: On master: BEGIN
+[0m12:01:33.274649 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m12:01:33.274649 [debug] [MainThread]: On master: COMMIT
+[0m12:01:33.275659 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.275659 [debug] [MainThread]: On master: COMMIT
+[0m12:01:33.276526 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:01:33.276526 [debug] [MainThread]: On master: Close
+[0m12:01:33.276526 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:01:33.277537 [info ] [MainThread]: 
+[0m12:01:33.284286 [debug] [Thread-1 (]: Began running node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:01:33.285301 [info ] [Thread-1 (]: 1 of 1 START sql view model medical_data.admissions ............................ [RUN]
+[0m12:01:33.286317 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions'
+[0m12:01:33.286317 [debug] [Thread-1 (]: Began compiling node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:01:33.294641 [debug] [Thread-1 (]: Writing injected SQL for node "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.296608 [debug] [Thread-1 (]: Began executing node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:01:33.356054 [debug] [Thread-1 (]: Writing runtime sql for node "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.359081 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.359081 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: BEGIN
+[0m12:01:33.360085 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:01:33.411287 [debug] [Thread-1 (]: SQL status: BEGIN in 0.051 seconds
+[0m12:01:33.412294 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.412294 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+
+  create view "healthcare_pipeline_db"."medical_data"."admissions__dbt_tmp"
+    
+    
+  as (
+    SELECT * FROM medical_data.admissionscorepopulatedtable
+  );
+[0m12:01:33.441422 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.028 seconds
+[0m12:01:33.449429 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.449429 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+alter table "healthcare_pipeline_db"."medical_data"."admissions__dbt_tmp" rename to "admissions"
+[0m12:01:33.451499 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m12:01:33.472506 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: COMMIT
+[0m12:01:33.473032 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.473032 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: COMMIT
+[0m12:01:33.475657 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m12:01:33.484680 [debug] [Thread-1 (]: Applying DROP to: "healthcare_pipeline_db"."medical_data"."admissions__dbt_backup"
+[0m12:01:33.493228 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:01:33.494244 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+drop view if exists "healthcare_pipeline_db"."medical_data"."admissions__dbt_backup" cascade
+[0m12:01:33.495228 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m12:01:33.499226 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: Close
+[0m12:01:33.501218 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b67cb99d-c0e2-498b-9f9d-e5aaecd2ef7c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002613CF49A60>]}
+[0m12:01:33.502218 [info ] [Thread-1 (]: 1 of 1 OK created sql view model medical_data.admissions ....................... [[32mCREATE VIEW[0m in 0.21s]
+[0m12:01:33.504225 [debug] [Thread-1 (]: Finished running node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:01:33.506225 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.506742 [debug] [MainThread]: On master: BEGIN
+[0m12:01:33.506742 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:01:33.556042 [debug] [MainThread]: SQL status: BEGIN in 0.049 seconds
+[0m12:01:33.556042 [debug] [MainThread]: On master: COMMIT
+[0m12:01:33.557048 [debug] [MainThread]: Using postgres connection "master"
+[0m12:01:33.557048 [debug] [MainThread]: On master: COMMIT
+[0m12:01:33.558056 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:01:33.558056 [debug] [MainThread]: On master: Close
+[0m12:01:33.559054 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:01:33.560096 [debug] [MainThread]: Connection 'list_healthcare_pipeline_db' was properly closed.
+[0m12:01:33.560096 [debug] [MainThread]: Connection 'list_healthcare_pipeline_db_medical_data' was properly closed.
+[0m12:01:33.560096 [debug] [MainThread]: Connection 'model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions' was properly closed.
+[0m12:01:33.561059 [info ] [MainThread]: 
+[0m12:01:33.562061 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m12:01:33.563062 [debug] [MainThread]: Command end result
+[0m12:01:33.594777 [info ] [MainThread]: 
+[0m12:01:33.595776 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:01:33.596775 [info ] [MainThread]: 
+[0m12:01:33.597775 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:01:33.599783 [debug] [MainThread]: Command `dbt run` succeeded at 12:01:33.599783 after 3.54 seconds
+[0m12:01:33.599783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026140102FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261403D9CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261403DB500>]}
+[0m12:01:33.600783 [debug] [MainThread]: Flushing usage events
+[0m12:04:23.303073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD238C88C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD279146E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD27915CA0>]}
+
+
+============================== 12:04:23.307596 | f95eb5e5-c298-46be-95c7-ddcfee1deee8 ==============================
+[0m12:04:23.307596 [info ] [MainThread]: Running with dbt=1.8.7
+[0m12:04:23.308606 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Itumeleng\\DEProjects\\ETL Pipeline for Patient Admissions and Outcomes\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:23.614208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD27D06360>]}
+[0m12:04:23.694676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD26B30470>]}
+[0m12:04:23.695755 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m12:04:23.706228 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m12:04:23.810565 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m12:04:23.811560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD270FDCA0>]}
+[0m12:04:25.287764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD288AFA40>]}
+[0m12:04:25.387453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD2800B680>]}
+[0m12:04:25.387453 [info ] [MainThread]: Found 1 model, 423 macros
+[0m12:04:25.388452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD24B70B30>]}
+[0m12:04:25.390963 [info ] [MainThread]: 
+[0m12:04:25.391971 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:04:25.392971 [debug] [ThreadPool]: Acquiring new postgres connection 'list_healthcare_pipeline_db'
+[0m12:04:25.502630 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db"
+[0m12:04:25.503701 [debug] [ThreadPool]: On list_healthcare_pipeline_db: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "list_healthcare_pipeline_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:04:25.504235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:25.577429 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.073 seconds
+[0m12:04:25.580177 [debug] [ThreadPool]: On list_healthcare_pipeline_db: Close
+[0m12:04:25.582388 [debug] [ThreadPool]: Acquiring new postgres connection 'list_healthcare_pipeline_db_medical_data'
+[0m12:04:25.594881 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db_medical_data"
+[0m12:04:25.595424 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: BEGIN
+[0m12:04:25.595969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:25.646891 [debug] [ThreadPool]: SQL status: BEGIN in 0.051 seconds
+[0m12:04:25.647891 [debug] [ThreadPool]: Using postgres connection "list_healthcare_pipeline_db_medical_data"
+[0m12:04:25.647891 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "list_healthcare_pipeline_db_medical_data"} */
+select
+      'healthcare_pipeline_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'medical_data'
+    union all
+    select
+      'healthcare_pipeline_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'medical_data'
+    union all
+    select
+      'healthcare_pipeline_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'medical_data'
+  
+[0m12:04:25.654895 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.007 seconds
+[0m12:04:25.655905 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: ROLLBACK
+[0m12:04:25.657413 [debug] [ThreadPool]: On list_healthcare_pipeline_db_medical_data: Close
+[0m12:04:25.663421 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:25.663421 [debug] [MainThread]: On master: BEGIN
+[0m12:04:25.664423 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:04:25.709326 [debug] [MainThread]: SQL status: BEGIN in 0.045 seconds
+[0m12:04:25.710328 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:25.711326 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:04:25.734516 [debug] [MainThread]: SQL status: SELECT 1 in 0.023 seconds
+[0m12:04:25.736515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD228B4080>]}
+[0m12:04:25.736515 [debug] [MainThread]: On master: ROLLBACK
+[0m12:04:25.737515 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:25.737515 [debug] [MainThread]: On master: BEGIN
+[0m12:04:25.738515 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m12:04:25.738515 [debug] [MainThread]: On master: COMMIT
+[0m12:04:25.739514 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:25.739514 [debug] [MainThread]: On master: COMMIT
+[0m12:04:25.740660 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:04:25.740660 [debug] [MainThread]: On master: Close
+[0m12:04:25.741669 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:04:25.742668 [info ] [MainThread]: 
+[0m12:04:25.746585 [debug] [Thread-1 (]: Began running node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:04:25.747600 [info ] [Thread-1 (]: 1 of 1 START sql view model medical_data.admissions ............................ [RUN]
+[0m12:04:25.747600 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions'
+[0m12:04:25.748694 [debug] [Thread-1 (]: Began compiling node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:04:25.757723 [debug] [Thread-1 (]: Writing injected SQL for node "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.758731 [debug] [Thread-1 (]: Began executing node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:04:25.817263 [debug] [Thread-1 (]: Writing runtime sql for node "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.819270 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.819270 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: BEGIN
+[0m12:04:25.820264 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:04:25.867225 [debug] [Thread-1 (]: SQL status: BEGIN in 0.047 seconds
+[0m12:04:25.868251 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.868251 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+
+  create view "healthcare_pipeline_db"."medical_data"."admissions__dbt_tmp"
+    
+    
+  as (
+    SELECT * FROM medical_data.admissionscorepopulatedtable
+  );
+[0m12:04:25.876860 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.008 seconds
+[0m12:04:25.885387 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.886388 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+alter table "healthcare_pipeline_db"."medical_data"."admissions" rename to "admissions__dbt_backup"
+[0m12:04:25.887389 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m12:04:25.892521 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.892521 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+alter table "healthcare_pipeline_db"."medical_data"."admissions__dbt_tmp" rename to "admissions"
+[0m12:04:25.893524 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m12:04:25.917090 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: COMMIT
+[0m12:04:25.917090 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.918066 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: COMMIT
+[0m12:04:25.919060 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m12:04:25.927577 [debug] [Thread-1 (]: Applying DROP to: "healthcare_pipeline_db"."medical_data"."admissions__dbt_backup"
+[0m12:04:25.935578 [debug] [Thread-1 (]: Using postgres connection "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"
+[0m12:04:25.935578 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "ETL_Pipeline_for_Patient_Admissions_and_Outcomes", "target_name": "dev", "node_id": "model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions"} */
+drop view if exists "healthcare_pipeline_db"."medical_data"."admissions__dbt_backup" cascade
+[0m12:04:25.946851 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.010 seconds
+[0m12:04:25.949875 [debug] [Thread-1 (]: On model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions: Close
+[0m12:04:25.951849 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f95eb5e5-c298-46be-95c7-ddcfee1deee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD24A41D60>]}
+[0m12:04:25.952849 [info ] [Thread-1 (]: 1 of 1 OK created sql view model medical_data.admissions ....................... [[32mCREATE VIEW[0m in 0.20s]
+[0m12:04:25.953852 [debug] [Thread-1 (]: Finished running node model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions
+[0m12:04:25.955849 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:25.955849 [debug] [MainThread]: On master: BEGIN
+[0m12:04:25.955849 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:04:26.004352 [debug] [MainThread]: SQL status: BEGIN in 0.047 seconds
+[0m12:04:26.004352 [debug] [MainThread]: On master: COMMIT
+[0m12:04:26.004352 [debug] [MainThread]: Using postgres connection "master"
+[0m12:04:26.004352 [debug] [MainThread]: On master: COMMIT
+[0m12:04:26.005874 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:04:26.005874 [debug] [MainThread]: On master: Close
+[0m12:04:26.006883 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:04:26.006883 [debug] [MainThread]: Connection 'list_healthcare_pipeline_db' was properly closed.
+[0m12:04:26.006883 [debug] [MainThread]: Connection 'list_healthcare_pipeline_db_medical_data' was properly closed.
+[0m12:04:26.007882 [debug] [MainThread]: Connection 'model.ETL_Pipeline_for_Patient_Admissions_and_Outcomes.admissions' was properly closed.
+[0m12:04:26.007882 [info ] [MainThread]: 
+[0m12:04:26.008889 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.62 seconds (0.62s).
+[0m12:04:26.009890 [debug] [MainThread]: Command end result
+[0m12:04:26.040548 [info ] [MainThread]: 
+[0m12:04:26.041557 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:04:26.042554 [info ] [MainThread]: 
+[0m12:04:26.042554 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:04:26.045558 [debug] [MainThread]: Command `dbt run` succeeded at 12:04:26.045558 after 2.94 seconds
+[0m12:04:26.046558 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD27DDB4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD26B300E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD27C5F800>]}
+[0m12:04:26.047557 [debug] [MainThread]: Flushing usage events
