@@ -117,10 +117,11 @@ To set up the required services (PostgreSQL, Apache Airflow, dbt), start the Doc
 ```bash
 docker-compose up -d
 ```
-![ETL_Flowchart](https://github.com/user-attachments/assets/e667b6a7-8f57-4fb2-bbd5-9b74ccf7b527)
+
 
 ---
 
+![ETL Work Flow](https://github.com/user-attachments/assets/a8aba685-2bfa-4f15-9743-c4c55aa1e0ed)
 
 
 ## Process
