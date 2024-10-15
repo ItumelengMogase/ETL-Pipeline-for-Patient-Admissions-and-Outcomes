@@ -121,8 +121,7 @@ docker-compose up -d
 
 ---
 
-![ETL Work Flow](https://github.com/user-attachments/assets/a8aba685-2bfa-4f15-9743-c4c55aa1e0ed)
-
+![ETL Workflow](https://github.com/user-attachments/assets/4ad0dea0-4389-48fa-a799-9bfa564bc717)
 
 ## Process
 
