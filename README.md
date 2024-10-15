@@ -170,6 +170,24 @@ This will transform the raw data into cleaned fact and dimension tables within P
 
 ---
 
+## Setting Up dbt
+
+**Create a `profiles.yml` file** in your `~/.dbt/` directory:
+   ```yaml
+   healthcare_pipeline:
+     target: dev
+     outputs:
+       dev:
+         type: postgres
+         threads: 1
+         host: localhost
+         port: 5432
+         user: <YOUR_USERNAME>
+         password: <YOUR_PASSWORD>
+         dbname: healthcare_pipeline_db
+         schema: medical_data
+
+
 ## Conclusion
 
 This project demonstrates a real-time ETL pipeline for processing medical data using **Docker**, **Apache Airflow**, **dbt**, and **PostgreSQL**. The pipeline automates the ingestion and transformation of synthetic patient data, making it ready for analysis in **Power BI**. The pipeline can be extended to handle larger datasets or other types of data sources.
