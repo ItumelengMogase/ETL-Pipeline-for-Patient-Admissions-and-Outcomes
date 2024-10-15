@@ -169,10 +169,9 @@ This will transform the raw data into cleaned fact and dimension tables within P
 - Build dashboards and visual reports to explore trends in patient admissions, diagnoses, and outcomes.
 
 ---
-
 ## Setting Up dbt
 
-**Create a `profiles.yml` file** in your `~/.dbt/` directory:
+1. **Create a `profiles.yml` file** in your `~/.dbt/` directory:
    ```yaml
    healthcare_pipeline:
      target: dev
@@ -186,7 +185,6 @@ This will transform the raw data into cleaned fact and dimension tables within P
          password: <YOUR_PASSWORD>
          dbname: healthcare_pipeline_db
          schema: medical_data
-
 
 ## Conclusion
 
