@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: Itumeleng
+      POSTGRES_PASSWORD: libra
+      POSTGRES_DB: patient_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U Itumeleng -d patient_database"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  airflow-init:
+    image: apache/airflow:2.11.0
+    container_name: airflow-init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://Itumeleng:libra@postgres:5432/patient_database
+      AIRFLOW__CORE__FERNET_KEY: your-fern3t-k3y-g03s-h3r3
+      AIRFLOW__WEBSERVER__SECRET_KEY: your-s3cr3t-k3y
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: >
+      bash -c "
+        airflow db migrate &&
+        airflow users create --username Itumeleng --password libra --firstname Itumeleng --lastname Mogase --role Admin --email itumeleng@outlook.com
+      "
+
+  airflow-webserver:
+    image: apache/airflow:2.11.0
+    container_name: airflow-webserver
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://Itumeleng:libra@postgres:5432/patient_database
+      AIRFLOW__CORE__FERNET_KEY: your-fern3t-k3y-g03s-h3r3
+      AIRFLOW__WEBSERVER__SECRET_KEY: your-s3cr3t-k3y
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: airflow webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.11.0
+    container_name: airflow-scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://Itumeleng:libra@postgres:5432/patient_database
+      AIRFLOW__CORE__FERNET_KEY: your-fern3t-k3y-g03s-h3r3
+      AIRFLOW__WEBSERVER__SECRET_KEY: your-s3cr3t-k3y
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: airflow scheduler
+
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.9.0
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./dbt:/dbt
+    working_dir: /dbt
+    environment:
+      DBT_PROFILES_DIR: /dbt
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+
+
+
+volumes:
+  pgdata:

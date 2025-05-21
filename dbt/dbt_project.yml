@@ -1,0 +1,4 @@
+name: patient_analytics
+version: 1.0.0
+profile: patient_database
+model-paths: ["models"]
